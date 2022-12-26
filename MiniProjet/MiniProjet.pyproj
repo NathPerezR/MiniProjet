@@ -11,7 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>MiniProjet</Name>
     <RootNamespace>MiniProjet</RootNamespace>
-    <InterpreterId>MSBuild|envMiniProjet|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|envMiniProjet1|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -26,10 +26,10 @@
     <Compile Include="callbacks.py" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="envMiniProjet\">
-      <Id>envMiniProjet</Id>
-      <Version>3.10</Version>
-      <Description>envMiniProjet (Python 3.10 (64-bit))</Description>
+    <Interpreter Include="..\..\..\..\envMiniProjet\">
+      <Id>envMiniProjet1</Id>
+      <Version>3.11</Version>
+      <Description>envMiniProjet (Python 3.11 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
