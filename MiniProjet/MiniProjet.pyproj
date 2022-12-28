@@ -12,6 +12,8 @@
     <Name>MiniProjet</Name>
     <RootNamespace>MiniProjet</RootNamespace>
     <InterpreterId>MSBuild|envMiniProjet1|$(MSBuildProjectFullPath)</InterpreterId>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
