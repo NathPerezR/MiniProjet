@@ -26,7 +26,8 @@ Ce registre inclut les accidents survenus entre 1990 et le mois précèdent à l
 Situation Victimes : https://www.datos.gov.co/resource/yhxn-eqqw.json
 >GeoGjon
 
-Division par département :
+Division par département : [Colombia.geo.json](https://gist.githubusercontent.com/john-guerra/43c7656821069d00dcbc/raw/be6a6e239cd5b5b803c6e7c2ec405b793a9064dd/Colombia.geo.json)
+
 <!-- USER'S GUIDE -->
 ## User's Guide
 
