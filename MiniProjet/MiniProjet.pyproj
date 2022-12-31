@@ -11,7 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>MiniProjet</Name>
     <RootNamespace>MiniProjet</RootNamespace>
-    <InterpreterId>MSBuild|envMiniProjet1|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|envMiniProjet|$(MSBuildProjectFullPath)</InterpreterId>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
@@ -30,8 +30,8 @@
     <Compile Include="data.py" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="..\..\..\..\envMiniProjet\">
-      <Id>envMiniProjet1</Id>
+    <Interpreter Include="..\..\..\envMiniProjet\envMiniProjet\">
+      <Id>envMiniProjet</Id>
       <Version>3.11</Version>
       <Description>envMiniProjet (Python 3.11 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
