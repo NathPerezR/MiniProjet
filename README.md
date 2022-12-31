@@ -35,7 +35,7 @@ Pour lancer le projet, il faut :
 1. Installer Python 3
 
 2. Cloner le repo 
-	```git clone https://github.com/github_username/repo_name.git```
+	```git clone https://github.com/NathPerezR/VictimesMAPColombie.git```
 
 	>Alternative à git : Télécharger le projet comprimé en cliquant en haut à droite.
 
