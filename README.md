@@ -26,7 +26,8 @@ Ce registre inclut les accidents survenus entre 1990 et le mois précèdent à l
 Situation Victimes : https://www.datos.gov.co/resource/yhxn-eqqw.json
 >GeoGjon
 
-Division par département :
+Division par département : [Colombia.geo.json](https://gist.githubusercontent.com/john-guerra/43c7656821069d00dcbc/raw/be6a6e239cd5b5b803c6e7c2ec405b793a9064dd/Colombia.geo.json)
+
 <!-- USER'S GUIDE -->
 ## User's Guide
 
@@ -40,14 +41,12 @@ Pour lancer le projet, il faut :
 	>Alternative à git : Télécharger le projet comprimé en cliquant en haut à droite.
 
 3. Se placer dans le répertoire **MiniProjet**
-	```cd /MiniProjet```
+	```cd VictimesMAPColombie/MiniProjet```
 4. Installer les dépendances avec 
 	 ```pip install -r requirements.txt _```
 
-Liste des librairies/packages utilisés :
-
 5. Lancer le dashboard avec
-	```python /MiniProjet/main.py```(Windows) ou 
+	```python main.py```(Windows) ou 
 	```python3 main.py" ```(Linux)
 
 6. Finalement ouvrir un Navigateur Web et aller à l'adresse indiqué sur la console : [http://127.0.0.1:8050](http://127.0.0.1:8050)
@@ -57,9 +56,12 @@ Liste des librairies/packages utilisés :
 <!-- RESULTS -->
 ## Analyse des résultats
 
-À partir de cette étude on peut constater que le total de victimes de mines antipersonnel en Colombien enregistrés jusqu’à présent est de 12 273. L’histogramme met en évidence le  2006 comme l'année la plus critique puisqu'il y a eu 1 224 victimes, le nombre le plus élevé de toute l'histoire de la Colombie. Au cours de la dernière décennie, la tendance est à la baisse, à l'exception de 2012, atteignant en 2016 des niveaux jamais vus depuis 1999. En 2022, 107 victimes ont été signalées.
+À partir de cette étude on peut constater que le total de victimes de mines antipersonnel en Colombien enregistrés jusqu’à présent est de 12 273. L’histogramme met en évidence le  2006 comme l'année la plus critique puisqu'il y a eu 1 224 victimes, le nombre le plus élevé de toute l'histoire de la Colombie. Au cours de la dernière décennie, la tendance est à la baisse, atteignant en 2017 des niveaux presque aussi bas qu’en 1999. En 2022, 107 victimes ont été signalées.
 
-Parmi les victimes le 81 % (9 927) ont été blessées et le 19 % (2 346) sont décédées. D'autre part, la Colombie a été l'un des pays au monde avec le plus grand nombre de victimes de la force publique, sur le nombre total de victimes, 60% ont été des membres de la force publique et les 40%  restants correspondent à des civils.
+Grace aux différents graphiques de classifications de victimes on peut observer que parmi les victimes le 81 % (9 927) ont été blessées et le 19 % (2 346) sont décédées suite à l’accident. D'autre part, la Colombie a été l'un des pays au monde avec le plus grand nombre de victimes de la force publique, sur le nombre total de victimes, 59.7% ont été des membres de la force publique et les 40.3 % correspondent à des civils.
+La carte permet de visualiser quels ont été les départements et les municipalités les plus affectés.
+Les 5 municipalités avec le plus grand nombre de victimes de 1990 à ce jour ont été Vistahermosa (Meta) avec 372 victimes, Tumaco (Nariño) avec 367, Tame (Arauca) avec 350 victimes, Tarazá (Antioquia) avec 275 et San Vicente del Caguán (Caquetá) avec 272 victimes.
+Au niveau départemental, les 5 départements avec le plus grand nombre de victimes ont été Antioquia (2 645), Meta (1 152), Nariño (1 068), Norte de Santander (969) et Caquetá (946).
 
 ## Authors
 Nathalia PEREZ RAMIREZ
