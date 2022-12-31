@@ -1,11 +1,11 @@
 # VICTIMES DE MINES ANTIPERSONNELS EN COLOMBIE
 <!-- TABLE DES MATIERES -->
 ## Table de matières
-1. [Présentation du projet](#introduction)
-    - [Source des données](#sources)
-2. [User's Guide](#user's_guide)
-3. [Developer's Guide](#developers_guide)
-4. [Analyse des résultats](#results)
+1. [Présentation du projet](##pr%C3%A9sentation-du-projet)
+    - [Source des données](#sources-des-donn%C3%A9es)
+2. [User's Guide](#users-guide)
+3. [Developer's Guide](#developers-guide)
+4. [Analyse des résultats](#analyse-des-r%C3%A9sultats)
 5. [Authors](#authors)
 
 <!-- INTRODUCTION-->
@@ -55,7 +55,7 @@ Liste des librairies/packages utilisés :
 ## Developer's Guide
 
 <!-- RESULTS -->
-## Analyse
+## Analyse des résultats
 
 À partir de cette étude on peut constater que le total de victimes de mines antipersonnel en Colombien enregistrés jusqu’à présent est de 12 273. L’histogramme met en évidence le  2006 comme l'année la plus critique puisqu'il y a eu 1 224 victimes, le nombre le plus élevé de toute l'histoire de la Colombie. Au cours de la dernière décennie, la tendance est à la baisse, à l'exception de 2012, atteignant en 2016 des niveaux jamais vus depuis 1999. En 2022, 107 victimes ont été signalées.
 
