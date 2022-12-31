@@ -28,18 +28,18 @@ def generate_pie(type_victime):
 
 # Choropleth
 
-carte_choro = px.choropleth_mapbox(
-        data.victimes_departement,
-        geojson=data.colombie_geo_map,
-        title='Victimes par departement',
-        color='Victimes',
-        locations='Departement',
-        featureidkey="properties.NOMBRE_DPT",
-        mapbox_style="carto-positron",
-        zoom=3,
-        center={'lat':4.577316, 'lon':-74.298973},
-        range_color=[0, 3000]        
-    )
+#carte_choro = px.choropleth_mapbox(
+#        data.victimes_departement,
+#        geojson=data.colombie_geo_map,
+#        title='Victimes par departement',
+#        color='Victimes',
+#        locations='Departement',
+#        featureidkey="properties.NOMBRE_DPT",
+#        mapbox_style="carto-positron",
+#        zoom=3,
+#        center={'lat':4.577316, 'lon':-74.298973},
+#        range_color=[0, 3000]        
+#    )
 
 
 # Carte centrée en Colombie
@@ -64,7 +64,7 @@ tooltipGeo=folium.features.GeoJsonTooltip(
 #PopUp("{}\n".format(victimes_departement['departamento'], victimes_departement['Victimes'])).add_to(choro)
 choro.add_to(colombie_carte)
 
-folium.GeoJson(data = data.colombie_geo_map, name='Hover',                
+folium.GeoJson(data = data.colombie_geo_map, name='Hover',
                tooltip=tooltipGeo).add_to(colombie_carte)
 
 

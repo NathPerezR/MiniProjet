@@ -6,7 +6,7 @@ import geopandas as gpd
 # DataFrame
 victimes = pd.read_json('https://www.datos.gov.co/resource/yhxn-eqqw.json?$limit=20000')
 total_victimes = len(victimes.index)
-victimes.rename(columns={'departamento':'Departement','ano':'Année','rangoedad':"Groupes d'âge"}, inplace=True)
+victimes.rename(columns={'departamento':'Departement','municipio':'Municipalité','ano':'Année','rangoedad':"Groupes d'âge"}, inplace=True)
 
 annees = victimes['Année']
 
@@ -14,6 +14,10 @@ annees = victimes['Année']
 victimes_departement = victimes.groupby(['Departement']).size().reset_index(name='Victimes')
 victimes_departement.sort_values(by=['Victimes'], ascending=False, inplace=True)
 top5_departements = victimes_departement['Departement'].head()
+# Nouvelle data Frame avec la quantité de victimes par municipalité
+victimes_municipalite = victimes.groupby(['Municipalité']).size().reset_index(name='Victimes')
+victimes_municipalite.sort_values(by=['Victimes'], ascending=False, inplace=True)
+top5_municipalite = victimes_municipalite['Municipalité'].head()
 
 # Données Geographics
 # pylint: disable-next=line-too-long

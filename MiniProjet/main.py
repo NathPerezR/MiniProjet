@@ -34,6 +34,12 @@ dropdown_pie =  dcc.Dropdown(id='victimes_pie',
         value='condicion', clearable=False
     )
 
+# Dropdoxn Carte
+dropdown_carte =  dcc.Dropdown(id='dropdown_carte',
+        options=['Municipalité', 'Departement'],
+        value='Departement', clearable=False
+    )
+
 # Cartes Informatives
 card_victimes_pie = dbc.Card(
     [
@@ -67,7 +73,7 @@ card_top5_municip = dbc.Card(
     [
         dbc.CardBody([
             html.H4('Les municipalitées les plus affectées', className='card-title text-center'),
-            html.P('dep',id ='top5_munn', className='card-text')
+            html.P(data.top5_municipalite, id='top5_munn', className='card-text')
             ]
         )
     ], color='warning'
@@ -75,7 +81,7 @@ card_top5_municip = dbc.Card(
 
 #Graphs
 db_annees_histogramme = dcc.Graph(id='histogramme', figure=graphs.histogramme)
-db_carte_dpt = dcc.Graph(id='carte', figure=graphs.carte_choro),
+db_carte = dcc.Graph(id='carte'),
 db_carte_folium = html.Iframe(id='map', srcDoc =open('map.html', 'r').read(), width='100%', height='400')
 
 #dbc.CaedGroup
@@ -83,14 +89,18 @@ db_carte_folium = html.Iframe(id='map', srcDoc =open('map.html', 'r').read(), wi
 # Layout
 app.layout = dbc.Container([
     db_title, 
-    #Cards
-    dbc.Row([dbc.Col(card_victimes_pie),
-             dbc.Col([card_total_victimes,card_top5_deptartements,card_top5_municip])], justify='around'),
-    #dcc.Dropdown(data.annees.unique(),'2021', id='dropdown'), 
+    # Cards
+    dbc.CardGroup([card_total_victimes,card_top5_deptartements,card_top5_municip]),
     # Graphs
-    dbc.Row([dbc.Col(db_annees_histogramme, width=6),
-             #dbc.Col(db_carte_dpt),
-             dbc.Col(db_carte_folium, width=5)], justify='around')
+    dbc.Row([dbc.Col(card_victimes_pie),
+             dbc.Col(db_carte_folium)], justify='around'),
+    dropdown_carte,
+    dbc.Row([dbc.Col(db_annees_histogramme),
+             dbc.Col(db_carte)
+             ])
+             
+            # dbc.Col(db_carte),
+             
     ],className='dbc')
 
 @app.callback(
@@ -98,17 +108,36 @@ app.layout = dbc.Container([
     Input('victimes_pie', 'value'))
     #Input("values", "value"))
 def generate_pie(value):
-    if (str(value) == "Groupes d'âge"):
-        label_replace = {'Mayor de 18 años':'Adulte','Menor de 18 años':'Enfant'}
-    else:
-        label_replace = None
-    fig = px.pie(data.victimes, names=data.victimes[value], labels = label_replace, hole=.5, template='plotly_dark', height=300)
+    #if (str(value) == "Groupes d'âge"):
+    #    label_replace = {'Mayor de 18 años':'Adulte','Menor de 18 años':'Enfant'}
+    #else:
+    #    label_replace = None
+    fig = px.pie(data.victimes, names=data.victimes[value], hole=.5, template='plotly_dark', height=300)
     return fig
 
-#@app.callback(
-#    Output("graph", "figure"), 
-#    Input("candidate", "value"))
-#def display_choropleth(candidate):
+@app.callback(
+    Output('carte', 'figure'), 
+    Input('dropdown_carte', 'value'))
+def display_carte(type_carte):
+    if type_carte== 'Municipalite':
+        data_carte = data.victimes_municipalite
+        geo = data.colombie_geo_map
+    else:
+        data_carte = data.victimes_departement
+        geo = data.colombie_geo_map
+    carte_choro = px.choropleth_mapbox(
+        data_carte,
+        geojson=geo,
+        title='Victimes par '+ type_carte ,
+        color='Victimes',
+        locations=type_carte,
+        featureidkey="properties.NOMBRE_DPT",
+        mapbox_style="carto-positron",
+        zoom=3,
+        center={'lat':4.577316, 'lon':-74.298973},
+        range_color=[0, 3000]
+    )
+    return carte_choro
 #    df = px.data.election() # replace with your own data source
 #    geojson = px.data.election_geojson()
 
