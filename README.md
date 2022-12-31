@@ -41,12 +41,12 @@ Pour lancer le projet, il faut :
 	>Alternative à git : Télécharger le projet comprimé en cliquant en haut à droite.
 
 3. Se placer dans le répertoire **MiniProjet**
-	```cd /MiniProjet```
+	```cd VictimesMAPColombie/MiniProjet```
 4. Installer les dépendances avec 
 	 ```pip install -r requirements.txt _```
 
 5. Lancer le dashboard avec
-	```python /MiniProjet/main.py```(Windows) ou 
+	```python main.py```(Windows) ou 
 	```python3 main.py" ```(Linux)
 
 6. Finalement ouvrir un Navigateur Web et aller à l'adresse indiqué sur la console : [http://127.0.0.1:8050](http://127.0.0.1:8050)
