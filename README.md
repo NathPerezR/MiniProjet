@@ -59,7 +59,7 @@ Liste des librairies/packages utilisés :
 
 À partir de cette étude on peut constater que le total de victimes de mines antipersonnel en Colombien enregistrés jusqu’à présent est de 12 273. L’histogramme met en évidence le  2006 comme l'année la plus critique puisqu'il y a eu 1 224 victimes, le nombre le plus élevé de toute l'histoire de la Colombie. Au cours de la dernière décennie, la tendance est à la baisse, à l'exception de 2012, atteignant en 2016 des niveaux jamais vus depuis 1999. En 2022, 107 victimes ont été signalées.
 
-Parmi les victimes le 81 % (9 927) ont été blessées et le 19 % (2 346) sont décédées. D'autre part, la Colombie a été l'un des pays au monde avec le plus grand nombre de victimes de la force publique et cela signifie que sur le nombre total de victimes, 60% ont été des membres de la force publique et les 40 autres % correspondent à des civils.
+Parmi les victimes le 81 % (9 927) ont été blessées et le 19 % (2 346) sont décédées. D'autre part, la Colombie a été l'un des pays au monde avec le plus grand nombre de victimes de la force publique, sur le nombre total de victimes, 60% ont été des membres de la force publique et les 40%  restants correspondent à des civils.
 
 ## Authors
 Nathalia PEREZ RAMIREZ
