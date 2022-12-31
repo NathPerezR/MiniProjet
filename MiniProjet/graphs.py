@@ -27,5 +27,6 @@ carte_choro = px.choropleth_mapbox(
         mapbox_style="carto-positron",
         zoom=3,
         center={'lat':4.577316, 'lon':-74.298973},
+        template='plotly_dark',
         range_color=[0, 3000]
     )
