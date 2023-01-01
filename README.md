@@ -23,10 +23,10 @@ Ce registre inclut les accidents survenus entre 1990 et le mois précèdent à l
 ### Sources des données
 >DataSet
 
-Situation Victimes : https://www.datos.gov.co/resource/yhxn-eqqw.json
+- Situation Victimes : https://www.datos.gov.co/resource/yhxn-eqqw.json
 >GeoGjon
 
-Division par département : [Colombia.geo.json](https://gist.githubusercontent.com/john-guerra/43c7656821069d00dcbc/raw/be6a6e239cd5b5b803c6e7c2ec405b793a9064dd/Colombia.geo.json)
+- Division par département : [Colombia.geo.json](https://gist.githubusercontent.com/john-guerra/43c7656821069d00dcbc/raw/be6a6e239cd5b5b803c6e7c2ec405b793a9064dd/Colombia.geo.json)
 
 <!-- USER'S GUIDE -->
 ## User's Guide
@@ -51,7 +51,26 @@ Pour lancer le projet, il faut :
 
 6. Finalement ouvrir un Navigateur Web et aller à l'adresse indiqué sur la console : [http://127.0.0.1:8050](http://127.0.0.1:8050)
 
+<!-- DEVELOPER'S GUIDE -->
 ## Developer's Guide
+
+L’application est structurée comme suit :
+
+### data.py
+Permet de lire le JSON avec toutes les données des Victimes avec **pandas** et créer le DataFrame. **Geopandas** est également utilisé pour la manipulation des données géographiques. Un traitement de ces données est réalisé afin de mieux les adapter pour les représentations graphiques.
+### graphs.py 
+Utilise les données traitées dans data pour la création de deux graphiques statiques avec **plotly express** :
+- Un histogramme présentant la fréquence de victimes par année.
+- Une carte choropleth mapbox permettant d’afficher les départements de la Colombie en fonction de la quantité de victimes.
+### main.py 
+Crée l’application Dash en utilisant :
+- **dash** pour la creation du layaout.
+- **dash bootstrap components** pour tout ce qui concerne le style de l’application.
+- Un callback pour l’affichage dynamique du diagramme circulaire (pie chart) en fonction du choix de l’utilisateur dans le dropdown :
+	- Groupes d’âge
+	- Hommes/Femmes
+	- Force publique/Civils
+	- Morts/Blessés
 
 <!-- RESULTS -->
 ## Analyse des résultats
